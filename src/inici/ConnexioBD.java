@@ -19,7 +19,7 @@ public class ConnexioBD {
 		try {
 			Class.forName("org.postgresql.Driver");
 			//con = DriverManager.getConnection("jdbc:postgresql://144.217.11.3/luxyrestaurant", "luxy", "LuxyRestaurant");
-			con = DriverManager.getConnection("jdbc:postgresql://192.168.1.250/LuxyRestaurant", "postgres", "postgres");
+			con = DriverManager.getConnection("jdbc:postgresql://localhost/LuxyRestaurant", "postgres", "postgres");
 		} catch (Exception e) {
 			e.getStackTrace();
 		}		
@@ -29,7 +29,6 @@ public class ConnexioBD {
 	 * CONSULTA BASE DE DAES
 	 * 
 	 * @param sQuery
-	 * @param db
 	 */
 	public ResultSet queryDB(String sQuery) {
 		ResultSet rs = null;
@@ -45,7 +44,6 @@ public class ConnexioBD {
 	 * SCRIPTS BASE DE DADES
 	 * 
 	 * @param sQuery
-	 * @param db
 	 */
 	public void execDB(String sQuery) {
 		try {
@@ -80,8 +78,7 @@ public class ConnexioBD {
 	}
 	/**
 	 * DESCONEXI� BASE DE DADES
-	 * 
-	 * @param db
+	 *
 	 */
 	public void desconnectarDB() {
 		try {

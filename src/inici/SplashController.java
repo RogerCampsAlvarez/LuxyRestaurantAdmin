@@ -79,14 +79,14 @@ public class SplashController {
 
 			fadeOut.setOnFinished(e -> {
 				try {
-					ResultSet rs = con.queryDB("Select count(*) as count from contrasenyes;");
+					ResultSet rs = con.queryDB("Select count(*) as count from usuaris;");
 
 					if (rs.next()){
 						if (rs.getInt("count") != 0){
 							loadStage.close();
 							splashStage.close();
 
-							Pane root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+							Pane root = FXMLLoader.load(getClass().getResource("Login.fxml"));
 							Scene scene = new Scene(root);
 
 							Util.openGUI(scene, nextStage, StageStyle.DECORATED, "Luxy Restaurant");
@@ -95,7 +95,7 @@ public class SplashController {
 							loadStage.close();
 							splashStage.close();
 
-							Pane root = FXMLLoader.load(getClass().getResource("MainContrasenyaNull.fxml"));
+							Pane root = FXMLLoader.load(getClass().getResource("Registre.fxml"));
 							Scene scene = new Scene(root);
 
 							Util.openGUI(scene, nextStage, StageStyle.DECORATED, "Luxy Restaurant");
