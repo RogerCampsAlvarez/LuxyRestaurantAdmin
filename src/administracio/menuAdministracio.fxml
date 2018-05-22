@@ -1,11 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="administracio.MenuAdministracio">
    <children>
-      <VBox prefHeight="400.0" prefWidth="155.0" />
+      <VBox prefHeight="400.0" prefWidth="155.0" style="-fx-background-color: #99ccff;">
+         <children>
+            <Button fx:id="bRegistrarUsuari" defaultButton="true" mnemonicParsing="false" prefHeight="67.0" prefWidth="155.0" text="Registrar Usuari" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="bGestionarSales" defaultButton="true" mnemonicParsing="false" prefHeight="66.0" prefWidth="155.0" text="Gestionar Sales" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="bGestionarTaules" defaultButton="true" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="155.0" text="Gestionar Taules" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="bGestionarAliments" defaultButton="true" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="155.0" text="Gestionar Aliments" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="bGestionarBegudes" defaultButton="true" layoutX="10.0" layoutY="250.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="155.0" text="Gestionar Begudes" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="bComptabilitat" defaultButton="true" layoutX="10.0" layoutY="274.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="155.0" text="Comptabilitat" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children></VBox>
    </children>
 </AnchorPane>

@@ -3,10 +3,7 @@ package inici;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.sql.ResultSet;
@@ -27,6 +24,8 @@ public class RegistreController implements Initializable{
     private PasswordField newPasswordField;
     @FXML
     private TextField userField;
+    @FXML
+    private CheckBox adminCheckBox;
 
 
     @FXML
@@ -52,7 +51,7 @@ public class RegistreController implements Initializable{
             else {
                 //si les contrasenyes coinsideixen
                 if (passwordField.getText().equals(newPasswordField.getText())){
-                    con.execDB("insert into usuaris values ('" + userField.getText() + "','" + passwordField.getText() + "');");
+                    con.execDB("insert into usuaris values ('" + userField.getText() + "','" + passwordField.getText() + "'," + adminCheckBox.isSelected() + ");");
                     alertConfirmation.setTitle("Registre");
                     alertConfirmation.setHeaderText("Usuari " + userField.getText() + " afegit amb exit!");
                     alertConfirmation.show();
