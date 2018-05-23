@@ -9,40 +9,38 @@
    <children>
       <VBox prefHeight="400.0" prefWidth="155.0" style="-fx-background-color: #99ccff;">
          <children>
-            <Button fx:id="bRegistrarUsuari" defaultButton="true" mnemonicParsing="false" onAction="#cmdRegistrarUsuari" prefHeight="67.0" prefWidth="155.0" text="Registrar Usuari" textAlignment="CENTER">
+            <Button fx:id="bRegistrarUsuari" mnemonicParsing="false" onAction="#cmdRegistrarUsuari" prefHeight="61.0" prefWidth="155.0" style="-fx-background-color: hff00ddff;" text="Registrar Usuari" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="bGestionarSales" defaultButton="true" mnemonicParsing="false" onAction="#cmdGestionarSales" prefHeight="66.0" prefWidth="155.0" text="Gestionar Sales" textAlignment="CENTER">
+            <Button fx:id="bGestionarSales" mnemonicParsing="false" onAction="#cmdGestionarSales" prefHeight="61.0" prefWidth="155.0" style="-fx-background-color: hff00ddff;" text="Gestionar Sales" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="bGestionarTaules" defaultButton="true" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onAction="#cmdGestionarTaules" prefHeight="67.0" prefWidth="155.0" text="Gestionar Taules" textAlignment="CENTER">
+            <Button fx:id="bGestionarTaules" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" onAction="#cmdGestionarTaules" prefHeight="61.0" prefWidth="155.0" style="-fx-background-color: hff00ddff;" text="Gestionar Taules" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="bGestionarAliments" defaultButton="true" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#cmdGestionarAliments" prefHeight="67.0" prefWidth="155.0" text="Gestionar Aliments" textAlignment="CENTER">
+            <Button fx:id="bGestionarAliments" layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#cmdGestionarAliments" prefHeight="61.0" prefWidth="155.0" text="Gestionar Aliments" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="bGestionarBegudes" defaultButton="true" layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#cmdGestionarBegudes" prefHeight="66.0" prefWidth="155.0" text="Gestionar Begudes" textAlignment="CENTER">
+            <Button fx:id="bGestionarBegudes" layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onAction="#cmdGestionarBegudes" prefHeight="61.0" prefWidth="155.0" text="Gestionar Begudes" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="bComptabilitat" defaultButton="true" layoutX="10.0" layoutY="274.0" mnemonicParsing="false" onAction="#cmdComptabilitat" prefHeight="67.0" prefWidth="155.0" text="Comptabilitat" textAlignment="CENTER">
+            <Button fx:id="bComptabilitat" layoutX="10.0" layoutY="274.0" mnemonicParsing="false" onAction="#cmdComptabilitat" prefHeight="61.0" prefWidth="155.0" text="Comptabilitat" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Button>
+            <Button fx:id="bDesconectar" mnemonicParsing="false" onAction="#cmdDesconectar" prefHeight="36.0" prefWidth="155.0" style="-fx-background-color: FFB687;" text="Desconectar" />
          </children></VBox>
-      <AnchorPane fx:id="anchorPane1" layoutX="155.0" prefHeight="400.0" prefWidth="445.0">
-         <children>
-            <Button fx:id="bDesconectar" layoutX="351.0" layoutY="14.0" mnemonicParsing="false" onAction="#cmdDesconectar" text="Desconectar" />
-         </children></AnchorPane>
+      <AnchorPane fx:id="anchorPane1" layoutX="155.0" prefHeight="400.0" prefWidth="445.0" />
    </children>
 </AnchorPane>
