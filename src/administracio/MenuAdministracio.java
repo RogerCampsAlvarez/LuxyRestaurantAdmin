@@ -45,7 +45,6 @@ public class MenuAdministracio {
 
     @FXML
     void cmdGestionarSales(ActionEvent event) {
-
     }
 
     @FXML
