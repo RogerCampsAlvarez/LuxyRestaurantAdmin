@@ -17,7 +17,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MenuTreballador implements Initializable{
+public class MenuTreballadorController implements Initializable{
     Pane root;
     Scene scene;
     Stage stage;
@@ -31,7 +31,7 @@ public class MenuTreballador implements Initializable{
     @FXML
     private AnchorPane anchorPane1;
 
-    public MenuTreballador() throws MalformedURLException {
+    public MenuTreballadorController() throws MalformedURLException {
     }
 
 
