@@ -10,6 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -21,6 +22,11 @@ import java.util.ResourceBundle;
 public class LoginController implements Initializable{
 	ResultSet rs;
 	ConnexioBD con;
+	Pane root;
+	Scene scene;
+	Stage stage;
+    Alert alert = new Alert(Alert.AlertType.ERROR);
+
 
 	@FXML
 	private Button bContinuar;
@@ -32,10 +38,6 @@ public class LoginController implements Initializable{
 
 	@FXML
 	void cmdContinuar(ActionEvent event){
-		System.out.println("cmdContinuar");
-		System.out.println(passwordField.getText());
-
-		Alert alert = new Alert(Alert.AlertType.ERROR);
 		int cont = 0;
 
 		try {
@@ -53,8 +55,28 @@ public class LoginController implements Initializable{
 				alert.setHeaderText("Usuari o contrasenya incorrecta");
 				alert.show();
 			}
-		} catch (SQLException e) {
-			e.printStackTrace();
+			else {
+                ResultSet rs = con.queryDB("Select count(*) as count from usuaris where usuari = '" + userField.getText() + "' and administracio = true");
+
+                //si te configurat com a administració
+                if (rs.next()) {
+                    if (rs.getInt("count") != 0) {
+                        root = FXMLLoader.load(getClass().getResource("/administracio/MenuAdministracio.fxml"));
+                        scene = new Scene(root);
+                        stage = (Stage) bContinuar.getScene().getWindow();
+                        Util.openGUI(scene, stage, "Administracio");
+                    } else {
+                        root = FXMLLoader.load(getClass().getResource("/administracio/MenuTreballador.fxml"));
+                        scene = new Scene(root);
+                        stage = (Stage) bContinuar.getScene().getWindow();
+                        Util.openGUI(scene, stage, "Treballador");
+                    }
+                }
+            }
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			e1.printStackTrace();
 		}
 	}
 

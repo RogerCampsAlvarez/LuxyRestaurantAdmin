@@ -1,10 +1,17 @@
 package inici;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -55,27 +62,20 @@ public class RegistreController implements Initializable{
                     alertConfirmation.setTitle("Registre");
                     alertConfirmation.setHeaderText("Usuari " + userField.getText() + " afegit amb exit!");
                     alertConfirmation.show();
+
+
+                    Pane root = FXMLLoader.load(getClass().getResource("/inici/Login.fxml"));
+                    Scene scene = new Scene(root);
+                    Stage stage = (Stage) bContinuar.getScene().getWindow();
+                    Util.openGUI(scene, stage, "Login");
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
-
-	/*
-	public void initialize(Stage primaryStage) {
-		System.out.println("initialize");
-
-		try {
-			Parent parent = FXMLLoader.load(getClass().getResource("Login.fxml"));
-			primaryStage.setTitle("LuxyRestaurant");
-			primaryStage.setScene(new Scene(parent));
-			primaryStage.show();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	*/
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
