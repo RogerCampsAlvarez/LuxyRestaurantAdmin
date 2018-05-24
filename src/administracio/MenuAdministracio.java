@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MenuAdministracioController {
+public class MenuAdministracio {
     Pane root;
     Scene scene;
     Stage stage;
